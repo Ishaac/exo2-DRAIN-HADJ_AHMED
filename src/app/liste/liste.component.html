@@ -1,0 +1,11 @@
+<app-liste-detail (newItemEvent)="changeDisplayFilm($event)" *ngFor="let film of listFilm" [film]="film"></app-liste-detail>
+<div class="barre-separation">
+</div>
+<div class="div-detail" *ngIf="displayFilm">
+    <div class="detail-film">
+        <p>Titre du film : {{ displayFilm.title }}</p>
+    </div>
+    <div class="detail-film">
+        <img src="../../assets/film-image/{{ displayFilm.path }}">
+    </div>
+</div>

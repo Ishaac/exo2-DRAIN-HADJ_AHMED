@@ -1,0 +1,25 @@
+img{
+    height: 15%;
+    width: 15%;
+}
+
+.detail-film{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-detail{
+    padding: 15px;
+}
+
+.barre-separation{
+    background-color: black;
+    height: 1px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
