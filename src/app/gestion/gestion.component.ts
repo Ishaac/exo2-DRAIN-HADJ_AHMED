@@ -13,7 +13,6 @@ export class GestionComponent implements OnInit {
   constructor(private personneService: PersonneService) { }
 
   ngOnInit(): void {
-    console.log(this.personneService.recupererPersonne);
     if(this.personneService.personneDefined()){
       this.personne = this.personneService.recupererPersonne;
     }

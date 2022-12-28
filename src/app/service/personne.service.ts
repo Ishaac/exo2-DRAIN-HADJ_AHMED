@@ -8,10 +8,6 @@ export class PersonneService {
   private personne?: Personne;
   private isPersonneDefined = false;
 
-  constructor() {
-    console.log("personne service cree");
-  }
-
   public updatePersonne(personne: Personne): void{
     this.personne = personne;
     this.isPersonneDefined = true;
