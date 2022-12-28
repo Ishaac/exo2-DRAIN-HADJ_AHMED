@@ -1,6 +1,14 @@
 <div class="list-detail">
-    <p>{{ film.title }}</p>
-    <button mat-button (click)="changeDisplayFilm(film.id)">
-        Afficher
-    </button>
+  <table mat-table>
+    <ng-container>
+      <td>
+        <p>{{ film.title }}</p>
+      </td>
+      <td>
+        <button mat-stroked-button color="primary" (click)="changeDisplayFilm(film.id)">
+          Afficher
+        </button>
+      </td>
+    </ng-container>
+  </table>
 </div>
