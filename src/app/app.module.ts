@@ -6,11 +6,18 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { HomeComponent } from './home/home.component';
 import { ListeComponent } from './liste/liste.component';
 import { ListeDetailComponent } from './liste/liste-detail/liste-detail.component';
+import { ContactComponent } from './contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { GestionComponent } from './gestion/gestion.component';
+import { PersonneService } from './service/personne.service';
 
 @NgModule({
   declarations: [
@@ -19,18 +26,24 @@ import { ListeDetailComponent } from './liste/liste-detail/liste-detail.componen
     FooterComponent,
     HomeComponent,
     ListeComponent,
-    ListeDetailComponent
+    ListeDetailComponent,
+    ContactComponent,
+    GestionComponent
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatButtonModule
-
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule
 
   ],
-  providers: [],
+  providers: [PersonneService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

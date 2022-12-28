@@ -14,12 +14,9 @@ img{
 }
 
 .barre-separation{
-    background-color: black;
+    width: 60%;
     height: 1px;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    background-color: black;
+    margin: auto;
+    margin-bottom: 15px;
 }

@@ -1,0 +1,26 @@
+<div class="form-center">
+    <form [formGroup]="contactFormGroup" (ngSubmit)="onEnvoyer()">
+        <mat-form-field appearance="fill">
+            <mat-label>Nom :</mat-label>
+            <input matInput formControlName="nom">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Prénom :</mat-label>
+            <input matInput formControlName="prenom">
+        </mat-form-field>
+        <mat-checkbox (change)="onCheckboxChange()" formControlName="estCache">Masquer l'email</mat-checkbox>
+        <mat-form-field *ngIf="!estCache.value" appearance="fill">
+            <mat-label>Email :</mat-label>
+            <input matInput formControlName="mail">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Age :</mat-label>
+            <input matInput formControlName="age">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Commentaire :</mat-label>
+            <textarea matInput formControlName="commentaire"></textarea>
+        </mat-form-field>
+        <button [disabled]="!contactFormGroup.valid" mat-flat-button color="primary" type="submit">Envoyer</button>
+    </form>
+</div>
